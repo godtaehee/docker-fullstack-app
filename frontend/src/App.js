@@ -51,8 +51,6 @@ function App() {
             <button type="submit">확인</button>
           </form>
         </div>
-
-
       </header>
     </div>
   );
