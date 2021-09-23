@@ -8,7 +8,7 @@ RUN npm i
 
 COPY ./ ./
 
-RUN npm run builder
+RUN npm run build
 
 FROM nginx
 EXPOSE 3000
