@@ -6,6 +6,14 @@ app.use(express.json());
 
 const db = require('./db')
 
+db.pool.query(`CREATE TABLE lists (
+    id INTEGER AUTO_INCREMENT,
+    value TEXT, 
+    PRIMARY KEY (id)
+)`, (err, results, fileds) => {
+  console.log('results', results)
+})
+
 app.get('/api/values', function (req, res) {
   db.pool.query('SELECT * FROM lists;', (err, results, fields) => {
     if (err)
